@@ -13,3 +13,19 @@ fn test_read_file_lines() ->  io::Result<()> {
     assert_eq!(lines, vec!["Hello", "World"]);
     Ok(())
 }
+
+#[test]
+fn test_read_empty_file() -> io::Result<()> {
+    let temp_file = NamedTempFile::new()?;
+    let file_path = temp_file.path().to_str().unwrap();
+    let lines = read_file_lines(file_path)?;
+    assert!(lines.is_empty());
+    Ok(())
+}
+
+#[test]
+fn test_read_nonexistent_file() -> io::Result<()>  {
+    let result = read_file_lines("nonexistent_file.txt");
+    assert!(result.is_err());
+    Ok(())
+}

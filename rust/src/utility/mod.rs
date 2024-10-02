@@ -1,8 +1,3 @@
-use std::fs::File;
-use std::io::{self, BufRead, BufReader};
+mod read_file;
 
-pub fn read_file_lines (filename: &str) -> io::Result<Vec<String>> {
-    let file = File::open(filename)?;
-    let reader = BufReader::new(file);
-    reader.lines().collect()
-}
+pub use self::read_file::read_file_lines;
