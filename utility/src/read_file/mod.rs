@@ -1,4 +1,4 @@
-mod read_file;
+pub mod read_file;
 #[cfg(test)]
 pub mod read_file_test;
 
