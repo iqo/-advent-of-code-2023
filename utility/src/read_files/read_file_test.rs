@@ -1,6 +1,6 @@
+use crate::read_files::read_file_lines;
 use std::io::{self, Write};
 use tempfile::NamedTempFile;
-use super::read_file_lines;
 
 #[test]
 fn test_read_file_lines() ->  io::Result<()> {
