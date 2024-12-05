@@ -21,11 +21,13 @@ use utility::read_file::read_file_lines;
         Ok(())
     }
     fn total_distance(input: Vec<String>) {
-        // let mut left_list: Vec<String> = vec![];
-        //let mut rigth_list: Vec<String> = vec![];
+        let mut left_list: Vec<String> = Vec::new();
+        let mut rigth_list: Vec<String> = Vec::new();
         for line in input {
             let mut split_data = line.split_whitespace();
-            println!("{:?}", line )
-            //left_list.push(split_data.next().unwrap().parse::<32>().unwrap());
+            println!("{:?}", split_data );
+            left_list.push(split_data.next().unwrap().parse::<i32>().unwrap().to_string());
+            rigth_list.push(split_data.next().unwrap().parse::<i32>().unwrap().to_string());
+            println!("left: {:?}, rigth: {:?}", left_list, rigth_list);
         }
     }
