@@ -1,13 +1,6 @@
-
-// use std::env;
-// let path1 = env::current_dir()?;
-// println!("The current directory is {}", path1.display());
-// Ok(())
 use std::path::Path;
 use utility::read_file::read_file_lines;
-fn read_input_file() -> String {
-    std::fs::read_to_string("src/input.txt").unwrap()
-}
+
     fn main() -> std::io::Result<()> {
         
     /* 
