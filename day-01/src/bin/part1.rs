@@ -1,10 +1,10 @@
 
 // use std::env;
+// let path1 = env::current_dir()?;
+// println!("The current directory is {}", path1.display());
+// Ok(())
 use std::path::Path;
-
- use utility::read_file::read_file::read_file_lines;
-    //let path = Path::new("data").join("input.txt");
-    //let lines = read_file_lines(path.to_str().unwrap());
+use utility::read_file::read_file_lines;
 
     fn main() -> std::io::Result<()> {
     /* 
@@ -19,17 +19,13 @@ use std::path::Path;
         let lines = read_file_lines(path.to_str().unwrap())?;
         total_distance(lines);
         Ok(())
-
-        // let path1 = env::current_dir()?;
-        // println!("The current directory is {}", path1.display());
-        // Ok(())
     }
     fn total_distance(input: Vec<String>) {
-        let mut left_list: Vec<String> = vec![];
-        let mut rigth_list: Vec<String> = vec![];
+        // let mut left_list: Vec<String> = vec![];
+        //let mut rigth_list: Vec<String> = vec![];
         for line in input {
             let mut split_data = line.split_whitespace();
-            todo!()
+            println!("{:?}", line )
             //left_list.push(split_data.next().unwrap().parse::<32>().unwrap());
         }
     }
