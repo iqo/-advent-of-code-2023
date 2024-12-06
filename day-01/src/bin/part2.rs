@@ -1,12 +1,11 @@
 use std::path::Path;
 use utility::read_file::read_input_file;
 
-fn main() -> std::io::Result<()> {
+fn main() {
     let path = Path::new("day-01/data/").join("input.txt");
-    let file_input = read_input_file(path.to_str().unwrap());
+    let file_input: String = read_input_file(path.to_str().unwrap());
     let result: i32 = similarity_score(&file_input);
     print!("Total distance: {}", result);
-    Ok(())
 }
 
 pub fn similarity_score(input: &str) -> i32 {
