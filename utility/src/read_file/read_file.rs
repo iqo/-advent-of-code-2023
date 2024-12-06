@@ -1,8 +1,5 @@
-use std::fs::File;
-use std::io::{self, BufRead, BufReader};
+use std::fs::read_to_string;
 
-pub fn read_file_lines (filename: &str) -> io::Result<Vec<String>> {
-    let file: File = File::open(filename)?;
-    let reader: BufReader<File> = BufReader::new(file);
-    reader.lines().collect()
+pub fn read_input_file(filename: &str) -> String {
+    read_to_string(filename).unwrap()
 }
