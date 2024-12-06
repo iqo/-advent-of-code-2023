@@ -1,5 +1,5 @@
 use std::path::Path;
-use utility::read_file:: read_input_file;
+use utility::read_file::read_input_file;
 
 fn main() -> std::io::Result<()> {
     let path = Path::new("day-01/data/").join("input.txt");
